@@ -29,6 +29,7 @@ jobs:
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     steps:
+    - run: echo "🍏 This job's status is ${{ job.status }}."
     - uses: actions/checkout@v2
     - name: Set up Python ${{matrix.pyversion}}
       uses: actions/setup-python@v1
